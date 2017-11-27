@@ -2,6 +2,7 @@
 set -u
 
 export SMG=smg-1.1.0-SNAPSHOT
+
 export MANAGER=http://downloads.lappsgrid.org/service-manager
 export SCRIPTS=http://downloads.lappsgrid.org/scripts
 
@@ -135,7 +136,9 @@ sudo -u postgres createdb $DATABASE -O $ROLENAME -E 'UTF8'
 
 # Now install Tomcat and create the PostgreSQL database.
 log "Starting Tomcat installation."
-curl -sSL $MANAGER/install-tomcat.sh | bash
+# (Ben) curl -sSL $MANAGER/install-tomcat.sh | bash
+# Use the fixed version of install-tomcat.sh
+./install-tomcat.sh
 
 cp tomcat-users.xml $TOMCAT_MANAGER/conf
 cp service_manager.xml $TOMCAT_MANAGER/conf/Catalina/localhost

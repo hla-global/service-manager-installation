@@ -35,13 +35,14 @@ if [[ $OS = centos || $OS = redhat7 ]] ; then
     systemctl daemon-reload
     systemctl enable tomcat.service
 elif [[ $OS = ubuntu || $OS = redhat6 ]] ; then
-    wget $MANAGER/tomcat.sh
+    # wget $MANAGER/tomcat.sh
     mv tomcat.sh /etc/init.d/tomcat
     chmod +x /etc/init.d/tomcat
     if [[ $OS = ubuntu ]]; then 
         update-rc.d tomcat defaults
     else 
         chkconfig --add tomcat
+    fi # Added by Ben
 else
 	echo "Unknown Linux flavor... we should have failed already."
 	exit 1
