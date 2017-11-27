@@ -2,16 +2,16 @@
 
 ## The Short Version
 
-Run as `sudo`
-
 ```bash
-EDITOR=vi  # change to your favorite editor
-wget http://downloads.lappsgrid.org/service-manager/setup.sh
-chmod +x setup.sh
-./setup.sh
+git clone https://github.com/hla-global/service-manager-installation.git
+cd service-manager-installation
+sudo chmod +x setup.sh
+sudo ./setup.sh
 ```
 
-The `setup.sh` script has been tested on RedHat 6, CentOS 7.1, and Ubuntu 14.04LTS
+The `setup.sh` script has been tested on RedHat 6, CentOS 7.1, and Ubuntu 14.04LTS (by the LAPPS developers).
+
+Ben modified `setup.sh` and tested it on Ubuntu 16.04.
 
 ## The Long Version
 
