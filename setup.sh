@@ -155,7 +155,7 @@ log "Downloading the latest service manager war file."
 wget https://github.com/openlangrid/langrid/releases/download/servicegrid-core-20161206/jp.go.nict.langrid.webapps.servicegrid-core.jxta-p2p.nict-nlp-20161206.war
 mv `ls *.war | head -1` $TOMCAT_MANAGER/webapps/service_manager.war
 
-toggle_tomcat
+#toggle_tomcat
 
 log "Creating indices."
 wget $MANAGER/create_indices.sql
